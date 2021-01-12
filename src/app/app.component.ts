@@ -36,20 +36,22 @@ export class AppComponent {
    aggregateMe(): void {
      // tslint:disable-next-line: prefer-for-of
      for (let x = 0; x < this.articles.length; x++){
-       if ( this.articles[x].code === this.art.code){
-         console.log('Already in the database');
+       // tslint:disable-next-line: triple-equals
+       if ( this.articles[x].code == this.art.code){
+         alert('Already in the database');
          return;
        }
-       this.articles.push({
+      }
+     this.articles.push({
                           code: this.art.code,
                           description: this.art.description,
                           price: this.art.price
                          });
 
-       this.art.code        = null;
-       this.art.description = null;
-       this.art.price       = null;
-     }
+     this.art.code        = null;
+     this.art.description = null;
+     this.art.price       = null;
+
    }
    // read
    readMe(art: any): void {
@@ -61,7 +63,7 @@ export class AppComponent {
 updateMe(): void {
   let article: any;
   for (article of this.articles){
-   if (article.price === this.art.code) {
+   if (article.code === this.art.code) {
      article.description = this.art.description;
      article.price = this.art.price;
      return;
