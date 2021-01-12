@@ -9,7 +9,7 @@
     </tr>
 <tr *ngFor ="let art of articles">
   <td>{{ art.code }}</td>
-  <td>{{ art.description }}</td>
+  <td class="text-capitalize h2">{{ art.description }}</td>
   <td>{{ art.price }}</td>
   <td><button (click) ="deleteMe(art)"> Delete?</button></td>
   <td><button (click) ="readMe(art)"> Select</button></td>
@@ -20,13 +20,13 @@
 </div>
 <div class="column pb-4">
   <p style="flex-flow: row nowrap;">
-    Code: <input type="number" [(ngModel)] = "art.code" />
+    Code: <input type="number"  class="text-light" [(ngModel)] = "art.code" />
   </p>
   <p style="flex-flow: row nowrap;">
-    Description: <input type="text" [(ngModel)] = "art.description" />
+    Description: <input type="text"  class="text-light text-capitalize h2" [(ngModel)] = "art.description" />
   </p>
   <p style="flex-flow: row nowrap;">
-    Price: <input type="number" [(ngModel)] = "art.price" />
+    Price: <input type="number" class="text-light" [(ngModel)] = "art.price" />
   </p>
   <p class="row justify-content-center">
     <button  (click) = "aggregateMe()">Add</button>

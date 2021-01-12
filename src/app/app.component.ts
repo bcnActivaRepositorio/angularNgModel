@@ -19,10 +19,7 @@ export class AppComponent {
     {code: 4, description: 'onions', price: 10.55},
     {code: 5, description: 'butternut squash', price: 20.55},
   ];
-  register(): boolean {
-    return this.articles.length > 0;
-  }
-  // register = (): boolean => this.articles.length > 0;
+  register = (): boolean => this.articles.length > 0;
   // CRUD
   // DELETE
    deleteMe(art: any): void {
