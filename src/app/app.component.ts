@@ -63,7 +63,8 @@ export class AppComponent {
 updateMe(): void {
   let article: any;
   for (article of this.articles){
-   if (article.code === this.art.code) {
+    // tslint:disable-next-line: triple-equals
+   if (article.code == this.art.code) {
      article.description = this.art.description;
      article.price = this.art.price;
      return;
