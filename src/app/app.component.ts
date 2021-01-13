@@ -64,7 +64,7 @@ updateMe(): void {
   let article: any;
   for (article of this.articles){
     // tslint:disable-next-line: triple-equals
-   if (article.code == this.art.code) {
+   if (article.code === this.art.code) {
      article.description = this.art.description;
      article.price = this.art.price;
      return;
